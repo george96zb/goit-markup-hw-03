@@ -66,7 +66,7 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -76,9 +76,10 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 /**
@@ -86,6 +87,11 @@ img {
   | Project header
   |============================
 */
+
+.project-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -289,7 +295,12 @@ img {
   color: var(--main-text-color);
 }
 
+.team-content-wrapper {
+  padding: 30px;
+}
+
 .team-members {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -310,8 +321,20 @@ img {
   |============================
 */
 /* Buttons */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-button-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
 
 .portfolio-button {
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
@@ -333,7 +356,25 @@ img {
   background-color: var(--active-btn-color);
 }
 
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.work-list-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.work-content-wrapper {
+  padding: 30px 0;
+  border: 1px solid var(--light-color2);
+}
+
 .work-title {
+  margin-bottom: 4px;
+  margin-left: 24px;
+  text-align: left;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
@@ -341,6 +382,8 @@ img {
 }
 
 .work-subtitle {
+  margin-left: 24px;
+  text-align: left;
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--secondary-text-color);
